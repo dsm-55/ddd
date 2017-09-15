@@ -1,0 +1,89 @@
+<ion-view hide-nav-bar='true'>
+	<style type="text/css">
+		.left{
+			float: left;
+			width: 1.3rem;
+			height: 2rem;
+		}
+		.left img{
+			width: 100%;
+			height: 1.2rem;
+		}
+		.ban_img{
+			width: 100%;height: 3.68rem;
+		}
+		.ban_img img{
+			width: 100%;
+			height: auto;
+		}
+		.row_center{
+			text-align: center;
+		}
+		.row_center li{
+			width: 25%;
+			line-height: 1.54rem;
+			border-right: 1px solid gainsboro;
+		}
+		.row_center li:nth-child(4){
+			border: none;
+		}
+	</style>
+	
+	<!--//头部-->
+	<div class="bar bar-header" style="position: relative;">
+	 <div style="width: 1rem;height: 1rem; margin-right: 0.3rem;">
+    		<img style="width: 100%; height: auto;border-radius: 50%" src="img/perry.png" />
+    	</div>
+	  <div class="h1 title setColor">书屋</div>
+	  <div style="width: 3rem;height: 1rem;position: absolute;right: 0;">
+			<div class="left"><img src="img/345278026517637774_03.png"/></div>
+			<div class="right">
+				<p style="height: 0.3rem;">广州</p>
+				<p style="font-size: 0.13rem;">27°C/33°C</p>
+			</div>
+	  </div>
+	</div>	
+	<ion-content class='has-header'>
+		<div style="width: 100%;height: 3rem;background: #f8f8f8;position: relative;">
+			<button class="button" style="border: none;float: right;"><i class="icon ion-clipboard"></i>&nbsp;&nbsp;我的订单</button>
+			<input style="position: absolute;bottom: 0.3rem;left:1rem;width: 80%;height: 1.3rem; border-radius: 0.5rem;padding-left:0.3rem;" type="text" placeholder="输入您要搜索的商品" /> 
+			<p style="width:1.2rem;line-height:0.6rem;background: #07c2ad;color: #FFFFFF;border-radius: 0.5rem;text-align: center;position: absolute;bottom: 0.3rem;right: 1.4rem;">搜索</p>
+		</div>
+		<div class="ban_img"><img src="img/3452780265176377741.jpg"/></div>
+		<div style="width: 100%;height: 0.2rem;background: #e9e9e9;"></div>
+		
+    	<div class="row row_center " ng-repeat="rowNavTwo in conNavTwo">			
+			<div class="col col-25" ng-repeat="colNavTwo in rowNavTwo">
+				<img style="width: 48px;height:48px;" src="{{colNavTwo.src}}"/>
+				<p style="height: 0.2rem"></p>
+				<p>{{colNavTwo.text}}</p>
+			</div>					
+		</div>	
+		<div style="width: 100%;height: 0.4rem;background: #e9e9e9;border-bottom: 1px solid #dcdcdc;"></div>	
+		<ul class="row row_center">
+			<li class="col col-25">全部</li>
+			<li class="col col-25">销量最高</li>
+			<li class="col col-25">最新上架</li>
+			<li class="col col-25">价格最低</li>
+			
+		</ul>
+    	<div class="list">
+			
+		    <a class="item item-thumbnail-left" id="hover">
+		      <img src="img/5787000399067895131.jpg">
+		      <p style="height: 0.3rem;"></p>
+		      <h2>《青春向晚》</h2>
+		      <p style="height: 1rem;" v-bind:title="tips">随笔“十月出书”作品,73位作者带你重拾青春</p>
+		      <p style="float: left;font-size: 0.14rem;clear: both;">35.0元</p>
+		      <p style="float: right;"><span>已售8</span> </p>
+		    </a>
+		  
+		    <div style="height: 0.22rem;background: #f7f7f7;"></div>
+		   
+		</div>
+
+		
+		
+	</ion-content>
+	
+</ion-view>

@@ -1,0 +1,94 @@
+<ion-view hide-nav-bar='true'>
+	<style type="text/css">
+		.tabColor{
+			background: #FFFFFF;
+		}
+		.imgs{
+			width: 100%;
+			height: 5.47rem;
+		}
+		.imgs img{
+			width: 100%;
+			height: auto;
+		}
+		.center,.col-img{
+			text-align: center;
+		}
+		.swiper-container{
+			width: 100%;
+		}
+		.row_padding{
+			padding: 0 0.5rem 0 0.5rem;
+		}
+		.col-img{
+			width: 2rem;height: 2rem;
+		}
+		.text{
+			width: 100%;
+			line-height: 1.78rem;
+		}
+		.setColor{
+			color: #00C2AC;
+		}
+		.active{
+			color: #00c2ac;
+			border-bottom:1px solid #00C2AC !important;
+		}
+	</style>		
+	<!--//头部-->
+	<div class="bar bar-header">
+	 <div style="width: 1rem;height: 1rem; margin-right: 0.3rem;">
+    		<img style="width: 100%; height: auto;border-radius: 50%" src="img/perry.png" />
+    	</div>
+	  <div class="h1 title setColor">社区</div>
+	  <button class="button button-icon icon ion-search setColor"></button>
+	</div>	
+	<!--社区导航栏-->
+	<ul class="tabs tabs-top tabColor">
+	  <li class="tab-item active" >
+				   社区
+	  </li>
+	  <li class="tab-item " >
+				   作者专栏
+	  </li>
+	  <li class="tab-item " >
+				   笔友
+	  </li>	  
+	</ul>
+	
+	<!--内容区-->
+  <ion-content class='has-header has-subheader' overflow-scroll='false'>
+  	
+  		<div class="swiper-container2">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+   				 	<div class="imgs"><img src="{{bigImg.src}}"/></div>
+   				 	<!--写文区域-->
+   				 	<div class="text center">
+   				 		——&nbsp;&nbsp;&nbsp;写文&nbsp; &nbsp;——
+   				 	</div>
+   				 	
+   				 	<div class="brach_wrap" ng-repeat="rowArtical in articals">
+	   				 	<div class="row row_padding" >	   				 		
+	   				 		<div class="col col-33 col-img" ng-repeat='colArtical in rowArtical'><img src="{{colArtical.src}}"/><p>{{colArtical.text}}</p></div>	   				 	   				 		
+	   				 	</div>	   				 	
+	   				 	<div style="height: 0.7rem;"></div>	
+   				 	</div> 				 					 	
+   				 	<div style="width: 100%;height: 0.3rem;background: #f6f6f6;"></div>
+   				 	<!--兴趣区域-->
+   				 	<div class="text center">
+   				 		—— &nbsp;&nbsp;兴趣&nbsp;&nbsp;&nbsp;——
+   				 	</div>
+   				 	<div class="brach_wrap" ng-repeat="rowIntrest in intrests">  				 	
+	   				 	<div class="row row_padding" >	   				 		
+	   				 		<div class="col col-33 col-img" ng-repeat='colIntreat in rowIntrest'><img src="{{colIntreat.src}}"/><p>{{colIntreat.text}}</p></div>				 	   				 		
+	   				 	</div>
+   				 		<div style="height: 0.7rem;"></div>
+   				 	</div>   				 	
+   				</div>
+   				<div class="swiper-slide">gsd</div>
+   				<div class="swiper-slide">ssvds</div>
+   			</div>
+   		</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,121 @@
+
+
+<ion-view hide-nav-bar='true'>
+	
+	<style type="text/css">
+		.tabColor{
+				background: #FFFFFF;
+		}
+		.imgs{
+			width: 100%;
+			height: 4.06rem;
+		}
+		.imgs img{
+			width: 100%;
+			height: auto;
+		}
+		.nav{
+			width: 100%;
+			height: 2.74rem;
+			padding: 0.4rem 0 0.4rem 0;
+		}
+		.nav li{
+			width: 2.70rem;
+			height: 2.74rem;
+			float: left;
+			border-right: 1px solid #d6d6d6; 
+			text-align: center;	
+			list-style: none;	
+		}
+		.nav li:nth-child(4){
+			border: none;
+		}
+		.nav li img{
+			width: 0.84rem;
+			height: 0.66rem;
+		}
+		.setColor{
+			color: #00C2AC;
+		}
+		.active{
+			color: #00c2ac;
+			border-bottom:1px solid #00C2AC !important;
+		}
+</style>
+	<!--//头部-->
+	<div class="bar bar-header">
+	  <div style="width: 1rem;height: 1rem; margin-right: 0.3rem;">
+    		<img ng-click="tzLogin()" style="width: 100%; height: auto;border-radius: 50%" src="img/perry.png" />
+    	</div>
+	  <div class="h1 title setColor">圈子</div>
+	  <button class="button button-icon icon ion-compose setColor"></button>
+	</div>	
+	<!--导航栏-->
+	<ul class="tabs tabs-top tabColor">
+	  <li class="tab-item active" >
+				    最新
+	  </li>
+	  <li class="tab-item " >
+				    关注
+	  </li>
+	  <li class="tab-item " >
+				    好友
+	  </li>
+	  <li class="tab-item " >
+				    热门
+	  </li>	  
+	</ul>
+  <ion-content class="has-header has-subheader" style='padding-top: 0.1rem;' overflow-scroll='false'>
+  	
+  	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide ">
+				<div class="imgs">
+	 				<img src="img/6497574932105293341.jpg"/>
+	 			</div>
+	 			<div class="nav">
+	 				
+	 				<li>
+	 					<p style="height: 0.3rem;"></p>
+	 					<img src="img/64975749321052933410.jpg"/>
+	 					<div style="height: 0.3rem;"></div>
+	 					<p>签到</p>
+	 				</li>
+	 				<li>
+	 					<p style="height: 0.3rem;"></p>
+	 					<img src="img/64975749321052933411_03.png"/>
+	 					<div style="height: 0.3rem;"></div>
+	 					<p>小秘密</p>
+	 				</li>
+	 				<li>
+	 					<p style="height: 0.3rem;"></p>
+	 					<img src="img/64975749321052933410_03.png"/>
+	 					<div style="height: 0.3rem;"></div>
+	 					<p>排行榜</p>
+	 				</li>
+	 				<li>
+	 					<p style="height: 0.3rem;"></p>
+	 					<img src="img/64975749321052933410_05.png"/>
+	 					<div style="height: 0.3rem;"></div>
+	 					<p>话题</p>
+	 				</li>
+	 			</div>
+			</div>
+			<div class="swiper-slide">
+				erre
+			</div>
+			<div class="swiper-slide">
+				2432
+			</div>
+			<div class="swiper-slide">
+				个个人
+			</div>
+			
+		</div>
+	</div>
+ 			
+ 			
+ 			
+ 			
+  </ion-content>
+</ion-view>
